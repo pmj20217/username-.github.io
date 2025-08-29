@@ -1,0 +1,47 @@
+EC2 (Elastic Compute Cloud)
+-> 컴퓨터를 클라우드로 빌려준다.
+
+IDC(Internet Data Center) = 서버실
+
+[AWS]
+-> AWS 가 책임 지는 영역 
+-> 고객사가 책임 지는 영역
+
+EC2 인스턴스(서버 1대)
+
+O/S
+Operating System
+
+SSH(Secure Shell)
+
+인바운드 규칙 -> 모든 SSH 을 허용하라
+
+SSH 가 없다는 건 모두 차단하라
+
+SSH     22
+HTTP   80
+HTTPS 443
+
+웹 서비스
+FastAPI 8000/8080 (개발환경)
+
+MySQL 3306
+
+0.0.0.0/0 => 모든 IP
+
+13.209.1.56/29
+
+클라이언트 입장에서 HTTP 요청 보내는 방법
+-> 브라우저 검색 창에 주소 입력 =GET + 80포트 요청
+
+SSH(22) ->AWS IP
+SSH(22) ->My IP
+SSH(80)-> My IP/ 모든 IP
+
+EC2 User Data 
+= EC2가 처음 생성 될 때 필요한 작업을 정의한 초기화 스크립트가 자동으로 실행되는 기능
+
+Root 계정 실행(-> sudo 필요 없음)
+처음 생선될 때만 동작 ->  일시정지 했다가 다시 시작 -> 영향 없음 
+
+편집이 가능한 이유 -> 설정 복사 다른 인스턴스
